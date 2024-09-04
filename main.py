@@ -4,6 +4,9 @@ from utils import require_api_key, remove_background, INPUT_FOLDER
 
 app = Flask(__name__)
 
+@app.route("/")
+def hello():
+    return "Hello World!"
 
 @app.route('/remove-bg', methods=['POST'])
 @require_api_key
